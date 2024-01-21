@@ -146,7 +146,10 @@ def parseArgs():
     input_file, weights, impacts, output_file = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
     if ',' not in weights or ',' not in impacts:
         raise ValueError("Weights and impacts must be separated by commas.")
-    weights = list(map(np.float32, weights.split(",")))
+    try:
+        weights = list(map(np.float32, weights.split(",")))
+    except ValueError:
+        sys.exit('Invalid weights')
     impacts = impacts.split(",")
     return input_file, weights, impacts, output_file
 

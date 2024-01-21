@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: TOPSIS-Rajneesh-102283007
+Version: 0.1
+Summary: A Python package to perform Multiple Criteria Decision Making using TOPSIS
+Author: Rajneesh Bansal
+Author-email: rajneeshb231@gmail.com
+Keywords: TOPSIS,MCDM,Criteria,Multiple,Decision making,Decision,Ranking
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+A Python package that provides a comprehensive implementation of the TOPSIS method for Multiple Criteria Decision Making (MCDM). The Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) is a well-established decision-making approach that assists in selecting the best alternative from a set of feasible options based on multiple criteria..
