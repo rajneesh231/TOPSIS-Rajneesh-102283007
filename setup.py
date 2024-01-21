@@ -1,33 +1,39 @@
-from setuptools import setup, find_packages
-import codecs
-import os
+import setuptools
 
+def readme():
+    with open('README.md') as file:
+        README = file.read()
+    return README
 
-VERSION = '0.1'
-DESCRIPTION = 'A Python package to perform Multiple Criteria Decision Making using TOPSIS'
-LONG_DESCRIPTION = 'A Python package that provides a comprehensive implementation of the TOPSIS method for Multiple Criteria Decision Making (MCDM). The Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) is a well-established decision-making approach that assists in selecting the best alternative from a set of feasible options based on multiple criteria..'
-
-# Setting up
-setup(
+setuptools.setup(
     name="TOPSIS-Rajneesh-102283007",
-    version=VERSION,
-    description = DESCRIPTION,
-  author = 'Rajneesh Bansal',                   # Type in your name
-  author_email = 'rajneeshb231@gmail.com',
+    version="0.3",
+    description="A Python package for implementing TOPSIS technique.",
+    long_description=readme(),
     long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    packages=find_packages(),
-    install_requires=[            # I get to this in a second
-          'numpy',
-          'pandas',
-      ],
-   keywords = ['TOPSIS', 'MCDM', 'Criteria','Multiple','Decision making','Decision','Ranking'],
+    author="Rajneesh Bansal",
+    author_email="rajneeshb231@gmail.com",
+    license="MIT",
     classifiers=[
-        'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-        'Intended Audience :: Developers',   
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ] 
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        "Programming Language :: Python :: 3.7",
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+    ],
+    packages=["TOPSIS-Rajneesh-102283007"],
+    include_package_data=True,
+    install_requires=[                      'numpy',
+                      'pandas',
+     ],
+     entry_points={
+        "console_scripts": [
+            "topsis=src.topsis:main",
+        ]
+     },
 )
